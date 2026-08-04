@@ -24,8 +24,18 @@ std::vector<WifiAP> scanDualBand() {
             case WIFI_AUTH_WPA2_WPA3_PSK: AP.encryptionType = "WPA2/WPA3/PSK"; break;
             default: AP.encryptionType = "Unknown"; break;
             }
+        if (AP.channel >= 1 && AP.channel <= 14){
+            AP.band = WiFiband::BAND_2_4GHZ;
+        }
+        else if (AP.channel >= 36 && AP.channel <= 177){
+            AP.band = WiFiband::BAND_5GHZ;
+        }
+        else {
+            AP.band = WiFiband::UNKNOWN;
+        }
         recordedAP.push_back(AP);
         }
+        
     
     return recordedAP;
 }

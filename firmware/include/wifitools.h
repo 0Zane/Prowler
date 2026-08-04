@@ -2,6 +2,11 @@
 #include <Arduino.h>
 #include <vector>
 
+enum class WiFiband {
+    UNKNOWN,
+    BAND_2_4GHZ,
+    BAND_5GHZ
+};
 
 struct WifiAP {
     String ssid;
@@ -9,7 +14,11 @@ struct WifiAP {
     int rssi;
     String encryptionType;
     int32_t channel;
+    WiFiband band;
+    
 };
+
+
 
 //void launchWebUI(){}
 
