@@ -1,19 +1,22 @@
+#pragma once
 #include <Arduino.h>
+#include <vector>
 
-void launchWebUI(){}
-
-void flood(){}
 
 struct WifiAP {
     String ssid;
-    u_int8_t bssid;
+    //u_int8_t bssid;
     int rssi;
     String encryptionType;
 };
 
+//void launchWebUI(){}
+
+//void flood(){}
+
 std::vector<WifiAP> scanDualBand();
 
-std::vector<WifiAP> scanWiFi5();
+//std::vector<WifiAP> scanWiFi5();
 
-std::vector<WifiAP> scanWiFi24();
+//std::vector<WifiAP> scanWiFi24();
 
