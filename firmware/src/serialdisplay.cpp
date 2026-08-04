@@ -9,6 +9,8 @@ void displayWifi(std::vector<WifiAP> scanResult){
         //Serial.println(scanResult[wifi].bssid);
         Serial.println(scanResult[wifi].rssi);
         Serial.println(scanResult[wifi].encryptionType);
+                    
+   
         Serial.println("===================");
     }
 }

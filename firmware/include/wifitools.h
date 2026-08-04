@@ -8,6 +8,7 @@ struct WifiAP {
     //u_int8_t bssid;
     int rssi;
     String encryptionType;
+    int32_t channel;
 };
 
 //void launchWebUI(){}
