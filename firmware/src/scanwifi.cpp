@@ -10,7 +10,7 @@ std::vector<WifiAP> scanDualBand() {
     for (int i = 0; i < foundAP; i++){
         WifiAP AP;
         AP.ssid = WiFi.SSID(i);
-        //AP.bssid = WiFi.BSSID(i);
+        AP.bssid = WiFi.BSSIDstr(i);
         AP.rssi = WiFi.RSSI(i);
         AP.channel = WiFi.channel(i);
         switch (WiFi.encryptionType(i)) {
