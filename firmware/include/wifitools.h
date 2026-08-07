@@ -10,7 +10,7 @@ enum class WiFiband {
 
 struct WifiAP {
     String ssid;
-    //u_int8_t bssid;
+    String bssid;
     int rssi;
     String encryptionType;
     int32_t channel;
@@ -26,7 +26,7 @@ struct WifiAP {
 
 std::vector<WifiAP> scanDualBand();
 
-//std::vector<WifiAP> scanWiFi5();
+std::vector<WifiAP> scanWiFi5();
 
-//std::vector<WifiAP> scanWiFi24();
+std::vector<WifiAP> scanWiFi2_4();
 
