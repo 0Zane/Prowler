@@ -18,11 +18,16 @@ struct WifiAP {
     
 };
 
-
+extern const char* const SSIDSIOT[];
+extern const char* const SSIDSCYBER[];
 
 //void launchWebUI(){}
 
-//void flood(){}
+void broadcastBeacon(const char* const list[]);
+
+void broadcastRandomBeacon();
+
+void boradcastBeaconOnChannel();
 
 std::vector<WifiAP> scanDualBand();
 
